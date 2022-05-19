@@ -27,7 +27,19 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.js$/,
+                loader: "source-map-loader"
             }
         ]
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js']
     }
 }
