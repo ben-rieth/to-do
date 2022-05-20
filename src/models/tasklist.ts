@@ -43,6 +43,8 @@ class TaskList {
         this._list.push(task);
     }
 
-    
+
 
 }
+
+export { TaskList };
