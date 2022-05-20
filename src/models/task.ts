@@ -1,8 +1,8 @@
 const Task = (name: string, 
-            priority: "none" | "low" | "mid" | "high",
-            dueDate: string,
-            dueTime: string, 
-            notes: string) => {
+            priority: "none" | "low" | "mid" | "high" = "none",
+            dueDate?: string | "none",
+            dueTime?: string | "none", 
+            notes?: string) => {
 
     let dateAdded = Date();
     let complete = false;
@@ -31,3 +31,5 @@ const Task = (name: string,
         isComplete
     }
 }
+
+export { Task };
