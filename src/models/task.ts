@@ -1,6 +1,8 @@
+import { Priority } from './priority';
+
 class Task {
     name: string;
-    priority: "none" | "low" | "mid" | "high";
+    priority: Priority;
     dueDate?: string;
     dueTime?: string;
     notes?: string;
@@ -8,7 +10,7 @@ class Task {
     _complete: boolean;
 
     constructor(name: string, 
-                priority: "none" | "low" | "mid" | "high"="none",
+                priority: Priority,
                 dueDate?: string,
                 dueTime?: string,
                 notes?: string) {
